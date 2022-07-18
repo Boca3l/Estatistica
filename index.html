@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatística</title>
+</head>
+<body>
+    <h1>Dimensionamento da Amostra</h1>
+    <div id="parametros">
+        <input type="number" name="amostra" id="n" placeholder="(n) Tamanho da Amostra"> = 
+        <input type="number" name="total" id="N" placeholder="(N) População Total">
+        <input type="number" name="p" id="p" placeholder="(P) Proporção de indivíduos pertencentes  a categoria">
+        <input type="number" name="q" id="q" placeholder="(Q) Proporção de indivíduos NÃO pertencentes  a categoria">
+        <input type="number" name="confianca" id="z" placeholder="(Z) Valor critico do Grau de confiança">
+        <input type="number" name="erro" id="d" placeholder="(d) Erro Amostral">
+    </div>
+    <div id="formula">
+        <p>
+            <u>(z*p*q*N)</u></br>
+            (d<sup>2</sup>*(N-1)+Z<sup>2</sup>*p*q)
+        </p>
+    </div>
+    <input type="button" value="Calcular" onclick="dimensionarAmostra()">
+
+    <script src="formulas.js" type="text/javascript"></script>
+</body>
+</html>
