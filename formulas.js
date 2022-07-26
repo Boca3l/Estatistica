@@ -15,3 +15,21 @@ function dimensionarAmostra () {
     }
 
 }
+
+function amplitudeFrequencia (){
+
+    const xmax = document.body.querySelector("#amp_F_Max");
+    const xmin = document.body.querySelector("#amp_F_Min");
+    const at = document.body.querySelector("#amp_F_Total");
+    const n = document.body.querySelector("#amp_F_N");
+    const k = document.body.querySelector("#amp_F_K");
+    const ac = document.body.querySelector("#amp_F_AC");
+
+    if(!ac.value){
+        at.value = parseInt(xmax.value-xmin.value);
+        k.value = Math.sqrt(n.value)
+        ac.value = parseInt(at.value/k.value)
+    }
+
+
+}

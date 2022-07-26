@@ -5,24 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estatística</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Dimensionamento da Amostra</h1>
-    <div id="parametros">
-        <input type="number" name="amostra" id="n" placeholder="(n) Tamanho da Amostra"> = 
-        <input type="number" name="total" id="N" placeholder="(N) População Total">
-        <input type="number" name="p" id="p" placeholder="(P) Proporção de indivíduos pertencentes  a categoria">
-        <input type="number" name="q" id="q" placeholder="(Q) Proporção de indivíduos NÃO pertencentes  a categoria">
-        <input type="number" name="confianca" id="z" placeholder="(Z) Valor critico do Grau de confiança">
-        <input type="number" name="erro" id="d" placeholder="(d) Erro Amostral">
-    </div>
-    <div id="formula">
-        <p>
-            <u>(z*p*q*N)</u></br>
-            (d<sup>2</sup>*(N-1)+Z<sup>2</sup>*p*q)
-        </p>
-    </div>
-    <input type="button" value="Calcular" onclick="dimensionarAmostra()">
+    <article id="dimensionamento_Amostral">
+        <h1>Dimensionamento da Amostra</h1>
+        <div Class="">
+            <input type="number" name="amostra" id="n" placeholder="(n) Tamanho da Amostra"> =
+            <input type="number" name="total" id="N" placeholder="(N) População Total">
+            <input type="number" name="p" id="p" placeholder="(P) Proporção de indivíduos pertencentes  a categoria">
+            <input type="number" name="q" id="q" placeholder="(Q) Proporção de indivíduos NÃO pertencentes  a categoria">
+            <input type="number" name="confianca" id="z" placeholder="(Z) Valor critico do Grau de confiança">
+            <input type="number" name="erro" id="d" placeholder="(d) Erro Amostral">
+        </div>
+
+        <div id="formula">
+            <p>
+                <u>(z*p*q*N)</u></br>
+                (d<sup>2</sup>*(N-1)+Z<sup>2</sup>*p*q)
+            </p>
+        </div>
+
+        <input type="button" value="Calcular" onclick="dimensionarAmostra()">
+        
+    </article>
+
+    <article id="amp_Frequencia">
+        <h1>Amplitude de Frequência</h1>
+        <div class="amp_F">
+            <input type="number" name="xmax" id="amp_F_Max" placeholder="(X max)Limite Máximo"> +
+            <input type="number" name="xmin" id="amp_F_Min" placeholder="(X min) Limite Mínimo"> =
+            <input type="number" name="Amplitude Total" id="amp_F_Total" placeholder="(At) Amplitude Total">
+            <br>
+            &radic;	<input type="number" name="amp_F_N" id="amp_F_N" placeholder="(N) Total de amostras">
+            =
+            <input type="number" name="k" id="amp_F_K" placeholder="(K)">
+            </br>
+            <input type="number" name="" id="amp_F_AC" placeholder="(AC) Amplitude de Classe">
+        </div>
+
+        <div id="formula">
+            <p>
+                AT = xmax - xmin <br>
+                K = &radic;N <br>
+                Ac = AT/K
+            </p>
+        </div>
+
+        <input type="button" value="Calcular" onclick="amplitudeFrequencia()">
+    </article>
 
     <script src="formulas.js" type="text/javascript"></script>
 </body>
